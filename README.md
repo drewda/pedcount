@@ -1,6 +1,4 @@
-PhoneGap-Start
----
+PedCount
+--------
 
-A starting point for PhoneGap apps.
-
-To get started: fork this repo, modify the config.xml to match your details, and get building!
+Smartphone app for counting pedestrians. Built using PhoneGap, which generates native apps for iPhone and Android.
