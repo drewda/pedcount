@@ -1,1 +1,23 @@
+# Ignore bundler config
+/.bundle
+
+# Middleman
+/build
+/.sass-cache
+
+# iOS project
+xcuserdata
+
+# Android project
+# built application files
+*.apk
+*.ap_
+# files for the dex VM
+*.dex
+# Java class files
+*.class
+# generated files
+project-android/bin/
+project-android/gen/
+
 .DS_Store
