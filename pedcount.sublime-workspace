@@ -1,0 +1,1673 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cur",
+				"currentCountPlan"
+			],
+			[
+				"projec",
+				"ProjectListview"
+			],
+			[
+				"render",
+				"renderProjectListview"
+			],
+			[
+				"authen",
+				"authentication-token"
+			],
+			[
+				"instru",
+				"instrument_field_id"
+			],
+			[
+				"parti",
+				"participant_record_id"
+			],
+			[
+				"partic",
+				"participant_instrument_records"
+			],
+			[
+				"instrum",
+				"instrument_fields"
+			],
+			[
+				"par",
+				"participants"
+			],
+			[
+				"instu",
+				"instrument_in_studies"
+			],
+			[
+				"exp",
+				"experimenter_id"
+			],
+			[
+				"rand",
+				"randomize"
+			],
+			[
+				"getCu",
+				"getCurrentUser"
+			],
+			[
+				"getC",
+				"getCurrentUser"
+			],
+			[
+				"countSe",
+				"countSession"
+			],
+			[
+				"or",
+				"organization"
+			],
+			[
+				"seg",
+				"segment"
+			],
+			[
+				"allow",
+				"allowed_to_export"
+			],
+			[
+				"proj",
+				"projectId"
+			],
+			[
+				"countSc",
+				"countScheduleDateUser"
+			],
+			[
+				"clea",
+				"clearTimers"
+			],
+			[
+				"au",
+				"authorization"
+			],
+			[
+				"proje",
+				"project_member"
+			],
+			[
+				"test",
+				"test_organization"
+			],
+			[
+				"hash",
+				"hashParams"
+			],
+			[
+				"has",
+				"hasOwnProperty"
+			],
+			[
+				"getCur",
+				"getCurrentCountPlan"
+			],
+			[
+				"d3",
+				"d3_category20"
+			],
+			[
+				"last",
+				"lastNumber"
+			],
+			[
+				"default_ma",
+				"default_max_number_of_counting_locations_per_project"
+			],
+			[
+				"counting",
+				"counting_day_credits"
+			],
+			[
+				"gat",
+				"gate_id"
+			],
+			[
+				"count",
+				"count_session"
+			],
+			[
+				"gate_g",
+				"gate_group_id"
+			],
+			[
+				"register",
+				"register"
+			],
+			[
+				"pro",
+				"project_id"
+			],
+			[
+				"count_",
+				"count_session"
+			],
+			[
+				"coun",
+				"countSessionId"
+			],
+			[
+				"measurePl",
+				"measurePlanAssistantParameters"
+			],
+			[
+				"sty",
+				"sType"
+			],
+			[
+				"Datatables",
+				"jquery-datatables"
+			],
+			[
+				"master",
+				"masterRouter"
+			],
+			[
+				"fa",
+				"false"
+			],
+			[
+				"vb",
+				"bVisible"
+			],
+			[
+				"fal",
+				"false"
+			],
+			[
+				"bse",
+				"bSearchable"
+			],
+			[
+				"Sti",
+				"sTitle"
+			],
+			[
+				"getBy",
+				"getByCid"
+			],
+			[
+				"mast",
+				"masterRouter"
+			],
+			[
+				"else",
+				"else"
+			],
+			[
+				"set",
+				"setAttribute"
+			],
+			[
+				"setA",
+				"setAttribute"
+			],
+			[
+				"selec",
+				"selectedSegmentId"
+			],
+			[
+				"masterR",
+				"masterRouter"
+			],
+			[
+				"sele",
+				"selectedSegmentCid"
+			],
+			[
+				"get",
+				"getByCid"
+			],
+			[
+				"count_s",
+				"count_session"
+			],
+			[
+				"redraw",
+				"redraw"
+			],
+			[
+				"false",
+				"false"
+			],
+			[
+				"bv",
+				"bVisible"
+			],
+			[
+				"bSee",
+				"bSearchable"
+			],
+			[
+				"true",
+				"true"
+			],
+			[
+				"segment",
+				"segmentId"
+			],
+			[
+				"masterRout",
+				"masterRouter"
+			],
+			[
+				"countSes",
+				"countSessionId"
+			],
+			[
+				"split",
+				"split"
+			],
+			[
+				"segme",
+				"segmentId"
+			],
+			[
+				"mode",
+				"mode"
+			],
+			[
+				"ad",
+				"aData"
+			],
+			[
+				"bVs",
+				"bVisible"
+			],
+			[
+				"bSea",
+				"bSearchable"
+			],
+			[
+				"selectedCount",
+				"selectedCountSession"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "source/javascripts/smartphone.coffee",
+			"settings":
+			{
+				"buffer_size": 1352,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/javascripts/routers/cordova.coffee",
+			"settings":
+			{
+				"buffer_size": 1498,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/javascripts/routers/jqm.coffee",
+			"settings":
+			{
+				"buffer_size": 343,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/javascripts/routers/master.coffee",
+			"settings":
+			{
+				"buffer_size": 4916,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/javascripts/views/pages/open_project_page.coffee",
+			"settings":
+			{
+				"buffer_size": 1097,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/index.html.slim",
+			"settings":
+			{
+				"buffer_size": 3392,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/javascripts/views/pages/sign_in_page.coffee",
+			"settings":
+			{
+				"buffer_size": 1685,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/javascripts/collections/gate_groups.coffee",
+			"settings":
+			{
+				"buffer_size": 751,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/javascripts/collections/gates.coffee",
+			"settings":
+			{
+				"buffer_size": 456,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 358.0,
+		"selected_items":
+		[
+			[
+				"clip",
+				"Clipboard History"
+			],
+			[
+				"upg",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"rei",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"inden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"setru",
+				"Set Syntax: Ruby"
+			],
+			[
+				"setrub",
+				"Set Syntax: Ruby"
+			],
+			[
+				"todo",
+				"Show TODOs: Project and open files"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"xml",
+				"Indent XML"
+			],
+			[
+				"dob",
+				"Snippet: Insert do |variable| … end"
+			],
+			[
+				"snipbo",
+				"Snippet: New Block"
+			],
+			[
+				"upgra",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"list pa",
+				"Package Control: List Packages"
+			],
+			[
+				"upgr",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"csv",
+				"CSV: Use First Row As Header"
+			],
+			[
+				"case",
+				"Convert Case: Title Case"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"packag",
+				"Package Control: List Packages"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"inde",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Discover Packages"
+			],
+			[
+				"if",
+				"Snippet: If"
+			]
+		],
+		"width": 579.0
+	},
+	"console":
+	{
+		"height": 138.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/collections/count_plans.coffee",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/collections/users.coffee",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/collections/segments.coffee",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/collections/projects.coffee",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/collections/gates.coffee",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/collections/gate_groups.coffee",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/collections/counts.coffee",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/collections/count_sessions.coffee",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/layouts/layout.slim",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/views/listviews/project_listview.coffee",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/views/pages/show_count_schedule_page.coffee",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/stylesheets/jquery-mobile-red-buttons.css",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/models/user.coffee",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/config.rb",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/build/javascripts/smartphone.js",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/libraries.js",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/libraries-jqm.js",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/libraries/get-hash-params.js",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/libraries/starts-with.js",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/libraries-jqm.js",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/routers/initial.coffee",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/Gemfile.lock",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/views/pages/sign_in_page.coffee",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/views/pages/validate_count_page.coffee",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/routers/jqm_events.coffee",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/routers/cordova_events.coffee",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/routers/jquery_mobile_events.coffee",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/Gemfile",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/index.html.slim",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/views/pages/start_count_page.coffee",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/libraries/jquery-mobile-routerlite.js",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/libraries/jquery-mobile-router.js",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/build/javascripts/libraries/jquery-mobile-router.js",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/libraries/jquery-mobile.js",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/build/javascripts/routers/cordova_events.js",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/project-ios/www/cordova-2.0.0.js",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/.gitignore",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/console.log",
+		"/Users/drew/Dropbox/S3Sol/code/pedplus/Gemfile",
+		"/Users/drew/Library/Application Support/Sublime Text 2/Packages/Ruby/Ruby.tmLanguage",
+		"/Users/drew/Dropbox/S3Sol/code/pedplus/Gemfile.lock",
+		"/Users/drew/Dropbox/S3Sol/code/pedplus/app/controllers/api/users_controller.rb",
+		"/Users/drew/Dropbox/S3Sol/code/pedplus/app/controllers/api/tokens_controller.rb",
+		"/Users/drew/Dropbox/S3Sol/code/pedplus/app/views/app/dashboard.slim",
+		"/Users/drew/Dropbox/S3Sol/code/pedplus/app/controllers/api/api_controller.rb",
+		"/Users/drew/Dropbox/S3Sol/code/pedplus/db/migrate/20120419164841_add_permission_to_export.rb",
+		"/Users/drew/Dropbox/S3Sol/code/pedplus/db/migrate/20120420031833_log_user_activity.rb",
+		"/Users/drew/Dropbox/S3Sol/code/pedplus/db/migrate/20120813185604_add_devise_auth_token_column.rb",
+		"/Users/drew/Dropbox/S3Sol/code/pedplus/app/models/user.rb",
+		"/Users/drew/Dropbox/S3Sol/code/pedplus/db/schema.rb",
+		"/Users/drew/Dropbox/S3Sol/code/pedplus/config/routes.rb",
+		"/Users/drew/Dropbox/S3Sol/code/pedplus/app/controllers/api/sessions_controller.rb",
+		"/Users/drew/Dropbox/S3Sol/code/pedplus/app/assets/javascripts/app/libraries.js",
+		"/Users/drew/Dropbox/S3Sol/code/pedplus/Guardfile",
+		"/Users/drew/Dropbox/S3Sol/code/pedplus/spec/requests/count_planning_spec.rb",
+		"/Users/drew/.bash_profile",
+		"/Users/drew/Dropbox/S3Sol/code/pedplus/app/controllers/application_controller.rb",
+		"/Users/drew/Dropbox/S3Sol/code/pedplus/config/initializers/devise.rb",
+		"/Users/drew/Dropbox/S3Sol/code/pedplus/app/views/admin/layout.slim",
+		"/Users/drew/Dropbox/S3Sol/code/pedplus/app/controllers/admin/users_controller.rb",
+		"/Users/drew/Dropbox/S3Sol/code/pedplus/app/assets/javascripts/app/dashboard.coffee",
+		"/Users/drew/Dropbox/S3Sol/code/pedplus/app/controllers/smartphone_controller.rb",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/smartphone.coffee",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/routers/master.coffee",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/stylesheets/jquery-mobile-theme.css",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/stylesheets/smartphone.css.scss",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/stylesheets/smartphone.scss",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/index.slim",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/javascripts/libraries/backbone-modelbinding.js",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/source/stylesheets/jquery-mobile-structure.css",
+		"/tmp/subl stdin xSL7xX.txt",
+		"/tmp/subl stdin dHO6dL.txt",
+		"/tmp/subl stdin s5TUhx.txt",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/app.rb",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/Guardfile",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/config.ru",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/src/assets/javascripts/libraries-jqm.js",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/src/assets/javascripts/libraries/underscore-addons.js",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/src/assets/javascripts/libraries.js",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/project-ios/PedCount/Cordova.plist",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/project-android/res/xml/config.xml",
+		"/Users/drew/software/phonegap/lib/android/xml/config.xml",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/src/index.html",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/src/config.xml",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/project-android/AndroidManifest.xml",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/src/assets/js/app.js",
+		"/Users/drew/Dropbox/S3Sol/code/pedcount/project-android/res/values/strings.xml",
+		"/Users/drew/.zshrc",
+		"/Users/drew/Desktop/testtest.rb",
+		"/Users/drew/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/drew/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/drew/Library/Application Support/Sublime Text 2/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/Users/drew/Dropbox/S3Sol/code/questions/app/views/experimenter/labs/edit.slim",
+		"/Users/drew/Dropbox/S3Sol/code/questions/app/views/experimenter/labs/new.slim",
+		"/Users/drew/Dropbox/S3Sol/code/questions/app/controllers/experimenter/studies_controller.rb",
+		"/Users/drew/Dropbox/S3Sol/code/questions/Gemfile",
+		"/Users/drew/Dropbox/S3Sol/code/questions/app/views/experimenter/layout.slim",
+		"/Users/drew/Dropbox/S3Sol/code/questions/app/views/experimenter/studies/edit.slim",
+		"/Users/drew/Dropbox/S3Sol/code/questions/db/schema.rb",
+		"/Users/drew/Dropbox/S3Sol/code/questions/app/views/experimenter/studies/new.slim",
+		"/Users/drew/Dropbox/S3Sol/code/questions/db/seeds.rb",
+		"/Users/drew/Dropbox/S3Sol/code/questions/app/controllers/experimenter/site_controller.rb",
+		"/Users/drew/Dropbox/S3Sol/code/questions/app/models/study.rb",
+		"/Users/drew/Dropbox/S3Sol/code/questions/app/models/experimenter.rb",
+		"/Users/drew/Dropbox/S3Sol/code/questions/app/models/lab.rb",
+		"/Users/drew/Dropbox/S3Sol/code/questions/README.markdown",
+		"/Users/drew/Dropbox/S3Sol/code/questions/README.rdoc",
+		"/Users/drew/Dropbox/S3Sol/code/questions/doc/README_FOR_APP",
+		"/Users/drew/Dropbox/S3Sol/code/questions/.gitignore",
+		"/Users/drew/Dropbox/S3Sol/code/questions/lib/tasks/diagrams.rake",
+		"/Users/drew/Dropbox/S3Sol/code/questions/config/initializers/devise.rb",
+		"/Users/drew/Dropbox/S3Sol/code/questions/app/controllers/study_controller.rb",
+		"/Users/drew/Dropbox/S3Sol/code/questions/app/controllers/site_controller.rb",
+		"/Users/drew/Dropbox/S3Sol/code/questions/app/controllers/lab_controller.rb",
+		"/Users/drew/Dropbox/S3Sol/code/questions/app/controllers/application_controller.rb",
+		"/Users/drew/Dropbox/S3Sol/code/questions/config/routes.rb",
+		"/Users/drew/Dropbox/S3Sol/code/questions/app/views/site/land.slim",
+		"/Users/drew/Dropbox/S3Sol/code/questions/app/views/study/start.slim",
+		"/Users/drew/Dropbox/S3Sol/code/questions/app/views/study/instrument.slim",
+		"/Users/drew/Dropbox/S3Sol/code/questions/app/views/study/finish.slim",
+		"/Users/drew/Dropbox/S3Sol/code/questions/app/views/study/_base.slim",
+		"/Users/drew/Dropbox/S3Sol/code/vambler/app/views/experimenter/administration.html.erb",
+		"/Users/drew/Dropbox/S3Sol/code/questions/app/assets/javascripts/study-create-edit-form.coffee",
+		"/Users/drew/Dropbox/S3Sol/code/questions/app/models/instrument_in_study.rb",
+		"/Users/drew/Dropbox/S3Sol/code/questions/app/models/participant_record.rb",
+		"/Users/drew/Dropbox/S3Sol/code/questions/app/models/participant_instrument_record_field.rb",
+		"/Users/drew/Dropbox/S3Sol/code/questions/app/models/participant_instrument_record.rb",
+		"/Users/drew/Dropbox/S3Sol/code/questions/app/models/instrument.rb"
+	],
+	"find":
+	{
+		"height": 33.0
+	},
+	"find_in_files":
+	{
+		"height": 97.0,
+		"where_history":
+		[
+			"",
+			"/Users/drew/Dropbox/S3Sol/code/vambler/app/views/experimenter/studies/new.slim",
+			"/Users/drew/Dropbox/S3Sol/code/vambler/app/controllers/experimenter/labs_controller.rb",
+			"",
+			"/Users/drew/Dropbox/S3Sol/code/pedplus/app/assets/javascripts/smartphone/routers/master.coffee",
+			"",
+			"/Users/drew/Dropbox/S3Sol/code/pedplus/app/assets/javascripts/smartphone",
+			"",
+			"/Users/drew/Dropbox/S3Sol/code/pedplus/vendor/assets/stylesheets/jquery-mobile-theme.css",
+			"",
+			"<open files>",
+			"",
+			"/Users/drew/Dropbox/S3Sol/code/pedplus/app/views/manage",
+			"",
+			"<open files>",
+			"",
+			"/Users/drew/Dropbox/S3Sol/code/pedplus/app/controllers/manage",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"checkAndPrepAuthenticationToken",
+			"pageinit",
+			"new Smartphone.Collections",
+			"model",
+			"sign-in-success-popup",
+			"sign_in",
+			"//=",
+			"json",
+			"bind",
+			"encodeURI",
+			"masterRouter",
+			"getHash",
+			"gemspec",
+			"gem",
+			"gemf",
+			"counting_plan",
+			"count_plan_id",
+			"counting_plan_id",
+			"reset_password_token",
+			"t.string   :reset_password_token",
+			"token",
+			"include_root",
+			"include_",
+			"json_root",
+			"backbon",
+			"redis",
+			"guar",
+			"require_no_authentication",
+			"smartphone",
+			"token",
+			"images/",
+			"images/ic",
+			"injectP",
+			"file",
+			"build",
+			"coff",
+			"sprock",
+			"therub",
+			"[\"",
+			"['",
+			": 4,",
+			"4,",
+			"kind_of",
+			"\"experimenters\"",
+			"instrument_fields",
+			"instrument_field",
+			"instrument_fields",
+			"default",
+			"database_authenticatable",
+			"stylesheet_",
+			"list-sty",
+			".btn",
+			"script:",
+			"javascript:",
+			"add2home",
+			"PedCount + ",
+			"www.example",
+			"require 'pry'",
+			"pry",
+			"debug",
+			"back",
+			"measure-tab",
+			"\"blue",
+			"blue1",
+			"blank",
+			"Take Study with Mouse",
+			"unity_file",
+			"console",
+			"injec",
+			"project",
+			"touchstart",
+			".on",
+			"on(",
+			".on",
+			"$.mobile.change",
+			"$.changeP",
+			"experimenters",
+			":destroy",
+			"name",
+			"time_ago_in",
+			"jquery-ui",
+			"Vambler Route Learning",
+			"Last administered at",
+			"- if current_experimenter.administrator",
+			":host",
+			"reset_password_within",
+			"use_salt_as_remember_token",
+			"reset_password_sent_at",
+			"current_experimenter.admin",
+			" %>",
+			"<%=",
+			"<h2",
+			"<h2>",
+			"<div class=\"",
+			"<div id=\"",
+			"<p>",
+			"studies",
+			"Studies",
+			"Study",
+			"study",
+			"asset",
+			"asse",
+			"compress",
+			"form_for",
+			"add_index",
+			"Virtual Ambler",
+			"sdt",
+			"pf_records",
+			"printHours",
+			"10:00",
+			"1:000",
+			"require 'rsp",
+			"cb",
+			"click touchstart",
+			"\"click t",
+			"grid",
+			"require 'linkedin'",
+			"UsersController::LinkedIn",
+			".bind",
+			"masterRouter.",
+			"getHash",
+			"windowOv",
+			"preventDefault",
+			"pagebeforechange",
+			"beforechangepage",
+			"pagechange",
+			"changepage",
+			"pagebeforechange"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"/images/ic",
+			"",
+			"=",
+			"h2",
+			"h2 ",
+			".",
+			"#",
+			"p ",
+			"labs",
+			"Labs",
+			"Lab",
+			"lab",
+			"click",
+			"@",
+			"has_many :log_entries",
+			"allowed_to_export_projects",
+			"click",
+			"/assets/jquery-mobile/",
+			"add_column",
+			"remove_column",
+			"vambler",
+			", newState",
+			".alert",
+			".alert.alert-info",
+			".alert.alert-error",
+			".alert.alert-success",
+			"/manage/layout",
+			"Manage",
+			"manage",
+			"Manage",
+			"ul.nav.nav-tabs",
+			".table.table-striped",
+			"counts_count"
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "source/javascripts/smartphone.coffee",
+					"settings":
+					{
+						"buffer_size": 1352,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1182,
+								1182
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 151.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "source/javascripts/routers/cordova.coffee",
+					"settings":
+					{
+						"buffer_size": 1498,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1221,
+								1221
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 284.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "source/javascripts/routers/jqm.coffee",
+					"settings":
+					{
+						"buffer_size": 343,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								343,
+								343
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "source/javascripts/routers/master.coffee",
+					"settings":
+					{
+						"buffer_size": 4916,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								472,
+								472
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "source/javascripts/views/pages/open_project_page.coffee",
+					"settings":
+					{
+						"buffer_size": 1097,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								679,
+								679
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "source/index.html.slim",
+					"settings":
+					{
+						"buffer_size": 3392,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								596,
+								596
+							]
+						],
+						"settings":
+						{
+							"is_xml": false,
+							"syntax": "Packages/Ruby-Slim.tmbundle/Syntaxes/Ruby Slim.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "source/javascripts/views/pages/sign_in_page.coffee",
+					"settings":
+					{
+						"buffer_size": 1685,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								493,
+								493
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "source/javascripts/collections/gate_groups.coffee",
+					"settings":
+					{
+						"buffer_size": 751,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								272,
+								272
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "source/javascripts/collections/gates.coffee",
+					"settings":
+					{
+						"buffer_size": 456,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								144,
+								144
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CoffeeScript/CoffeeScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 33.0
+	},
+	"input":
+	{
+		"height": 32.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 116.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"lay",
+				"source/layouts/layout.slim"
+			],
+			[
+				"projects.co",
+				"source/javascripts/collections/projects.coffee"
+			],
+			[
+				"segments.co",
+				"source/javascripts/collections/segments.coffee"
+			],
+			[
+				"proj",
+				"source/javascripts/collections/projects.coffee"
+			],
+			[
+				"showcount",
+				"source/javascripts/views/pages/show_count_schedule_page.coffee"
+			],
+			[
+				"sourcered",
+				"source/stylesheets/jquery-mobile-red-buttons.css"
+			],
+			[
+				"user.cof",
+				"source/javascripts/models/user.coffee"
+			],
+			[
+				"users",
+				"source/javascripts/collections/users.coffee"
+			],
+			[
+				"coluser",
+				"source/javascripts/collections/users.coffee"
+			],
+			[
+				"confi",
+				"config.rb"
+			],
+			[
+				"buildsm",
+				"build/javascripts/smartphone.js"
+			],
+			[
+				"layou",
+				"source/layouts/layout.slim"
+			],
+			[
+				"build",
+				"build/javascripts/smartphone.js"
+			],
+			[
+				"gemf",
+				"Gemfile.lock"
+			],
+			[
+				"laoy",
+				"source/layouts/layout.slim"
+			],
+			[
+				"red",
+				"source/stylesheets/jquery-mobile-red-buttons.css"
+			],
+			[
+				"inde",
+				"source/index.html.slim"
+			],
+			[
+				"sign",
+				"source/javascripts/views/pages/sign_in_page.coffee"
+			],
+			[
+				"slim",
+				"source/index.html.slim"
+			],
+			[
+				"signinp",
+				"source/javascripts/views/pages/sign_in_page.coffee"
+			],
+			[
+				"pagecof",
+				"source/javascripts/views/pages/start_count_page.coffee"
+			],
+			[
+				"lijq",
+				"source/javascripts/libraries-jqm.js"
+			],
+			[
+				"layout",
+				"source/layouts/layout.slim"
+			],
+			[
+				"routerl",
+				"source/javascripts/libraries/jquery-mobile-routerlite.js"
+			],
+			[
+				"libjq",
+				"source/javascripts/libraries-jqm.js"
+			],
+			[
+				"router",
+				"source/javascripts/libraries/jquery-mobile-router.js"
+			],
+			[
+				"route",
+				"build/javascripts/libraries/jquery-mobile-router.js"
+			],
+			[
+				"lijqm",
+				"source/javascripts/libraries-jqm.js"
+			],
+			[
+				"libr",
+				"source/javascripts/libraries.js"
+			],
+			[
+				"jqm",
+				"source/javascripts/libraries/jquery-mobile.js"
+			],
+			[
+				"mas",
+				"source/javascripts/routers/master.coffee"
+			],
+			[
+				"corev",
+				"build/javascripts/routers/cordova_events.js"
+			],
+			[
+				"coroev",
+				"build/javascripts/routers/cordova_events.js"
+			],
+			[
+				"cordovev",
+				"source/javascripts/routers/cordova_events.coffee"
+			],
+			[
+				"smarcof",
+				"source/javascripts/smartphone.coffee"
+			],
+			[
+				"giti",
+				".gitignore"
+			],
+			[
+				"user",
+				"app/models/user.rb"
+			],
+			[
+				"devitok",
+				"db/migrate/20120813185604_add_devise_auth_token_column.rb"
+			],
+			[
+				"sche",
+				"db/schema.rb"
+			],
+			[
+				"rou",
+				"config/routes.rb"
+			],
+			[
+				"dashb",
+				"app/views/app/dashboard.slim"
+			],
+			[
+				"apicon",
+				"app/controllers/api/api_controller.rb"
+			],
+			[
+				"moduser",
+				"app/models/user.rb"
+			],
+			[
+				"guar",
+				"Guardfile"
+			],
+			[
+				"gua",
+				"Guardfile"
+			],
+			[
+				"rout",
+				"config/routes.rb"
+			],
+			[
+				"appcon",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"devise",
+				"config/initializers/devise.rb"
+			],
+			[
+				"usercon",
+				"app/controllers/api/users_controller.rb"
+			],
+			[
+				"smart",
+				"app/controllers/smartphone_controller.rb"
+			],
+			[
+				"dev",
+				"config/initializers/devise.rb"
+			],
+			[
+				"smarsc",
+				"source/stylesheets/smartphone.css.scss"
+			],
+			[
+				"model",
+				"source/javascripts/libraries/backbone-modelbinding.js"
+			],
+			[
+				".giti",
+				".gitignore"
+			],
+			[
+				"smarcs",
+				"source/stylesheets/smartphone.scss"
+			],
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"conf",
+				"config.ru"
+			],
+			[
+				"cord",
+				"project-ios/PedCount/Cordova.plist"
+			],
+			[
+				"gi",
+				".gitignore"
+			],
+			[
+				"labsh",
+				"app/views/experimenter/labs/show.slim"
+			],
+			[
+				"labedit",
+				"app/views/experimenter/labs/edit.slim"
+			],
+			[
+				"labnew",
+				"app/views/experimenter/labs/new.slim"
+			],
+			[
+				"explay",
+				"app/views/experimenter/layout.slim"
+			],
+			[
+				"stucon",
+				"app/controllers/experimenter/studies_controller.rb"
+			],
+			[
+				"stunew",
+				"app/views/experimenter/studies/new.slim"
+			],
+			[
+				"schema",
+				"db/schema.rb"
+			],
+			[
+				"expilay",
+				"app/views/experimenter/layout.slim"
+			],
+			[
+				"expi",
+				"app/models/experimenter.rb"
+			],
+			[
+				"stud",
+				"app/models/study.rb"
+			],
+			[
+				"sitecon",
+				"app/controllers/experimenter/site_controller.rb"
+			],
+			[
+				"exp",
+				"app/models/experimenter.rb"
+			],
+			[
+				"lab",
+				"app/models/lab.rb"
+			],
+			[
+				"seed",
+				"db/seeds.rb"
+			],
+			[
+				"rea",
+				"README.rdoc"
+			],
+			[
+				"readm",
+				"doc/README_FOR_APP"
+			],
+			[
+				".gi",
+				".gitignore"
+			],
+			[
+				"lands",
+				"app/views/site/land.slim"
+			],
+			[
+				"studycrea",
+				"app/assets/javascripts/study-create-edit-form.coffee"
+			],
+			[
+				"instufi",
+				"app/models/instrument_field.rb"
+			],
+			[
+				"instrufieldc",
+				"app/models/instrument_field_choice.rb"
+			],
+			[
+				"instufield",
+				"app/models/instrument_field.rb"
+			],
+			[
+				"recordfi",
+				"app/models/participant_instrument_record_field.rb"
+			],
+			[
+				"insturb",
+				"app/models/instrument.rb"
+			],
+			[
+				"instufie",
+				"app/models/instrument_field.rb"
+			],
+			[
+				"inuchoi",
+				"app/models/instrument_field_choice.rb"
+			],
+			[
+				"instuf",
+				"app/models/instrument_field.rb"
+			],
+			[
+				"instufiel",
+				"app/models/instrument_field.rb"
+			],
+			[
+				"prodr",
+				"config/environments/production.rb"
+			],
+			[
+				"dever",
+				"config/environments/development.rb"
+			],
+			[
+				"first",
+				"db/migrate/20120611170717_first_data_model.rb"
+			],
+			[
+				"firstd",
+				"db/migrate/20120611170717_first_data_model.rb"
+			],
+			[
+				"field",
+				"app/models/instrument_field.rb"
+			],
+			[
+				"instru",
+				"app/models/instrument_in_study.rb"
+			],
+			[
+				"labr",
+				"app/models/lab.rb"
+			],
+			[
+				"boots",
+				"vendor/assets/stylesheets/bootstrap.css"
+			],
+			[
+				"dashbco",
+				"app/assets/javascripts/app/dashboard.coffee"
+			],
+			[
+				"appcof",
+				"app/assets/javascripts/app/app.coffee"
+			],
+			[
+				"devlay",
+				"app/views/devise/layout.slim"
+			],
+			[
+				"sessnew",
+				"app/views/devise/sessions/new.slim"
+			],
+			[
+				"smartscs",
+				"app/assets/stylesheets/smartphone/smartphone.scss"
+			],
+			[
+				"dashscs",
+				"app/assets/stylesheets/app/dashboard.scss"
+			],
+			[
+				"pry",
+				".pryrc"
+			],
+			[
+				"smartph",
+				"app/assets/javascripts/smartphone/smartphone.coffee"
+			],
+			[
+				"dashcof",
+				"app/assets/javascripts/app/dashboard.coffee"
+			],
+			[
+				"devinew",
+				"app/views/devise/passwords/new.slim"
+			],
+			[
+				"devislay",
+				"app/views/devise/layout.slim"
+			],
+			[
+				"smarlayou",
+				"app/views/smartphone/layout.slim"
+			],
+			[
+				"dashbo",
+				"app/views/smartphone/dashboard.slim"
+			],
+			[
+				"start",
+				"app/assets/javascripts/smartphone/views/pages/start_count_page.coffee"
+			],
+			[
+				"maste",
+				"app/assets/javascripts/smartphone/routers/master.coffee"
+			],
+			[
+				"segmentcof",
+				"app/assets/javascripts/app/models/segment.coffee"
+			],
+			[
+				"mast",
+				"app/assets/javascripts/app/routers/master.coffee"
+			],
+			[
+				"topbas",
+				"app/assets/stylesheets/app/views/top_bar.scss"
+			],
+			[
+				"mapscs",
+				"app/assets/stylesheets/app/views/map.scss"
+			],
+			[
+				"topbscs",
+				"app/assets/stylesheets/app/views/top_bar.scss"
+			],
+			[
+				"projecof",
+				"app/assets/javascripts/app/models/project.coffee"
+			],
+			[
+				"countsescof",
+				"app/assets/javascripts/app/collections/count_sessions.coffee"
+			],
+			[
+				"viewj",
+				"app/assets/javascripts/app/templates/top_bar/measure_tab_view.jst.ejs"
+			],
+			[
+				"row",
+				"app/assets/javascripts/app/views/tables/gate_group_table_row.coffee"
+			],
+			[
+				"measureplan",
+				"app/assets/javascripts/app/views/top_bar/measure_tab_plan_edit.coffee"
+			],
+			[
+				"psas",
+				"app/models/psas_record.rb"
+			],
+			[
+				"studnew",
+				"app/views/experimenter/studies/new.slim"
+			],
+			[
+				"par",
+				"app/models/participant.rb"
+			],
+			[
+				"parir",
+				"app/models/participant_personal_record.rb"
+			],
+			[
+				"stu",
+				"app/models/study.rb"
+			],
+			[
+				"expiedit",
+				"app/views/experimenter/experimenters/edit.slim"
+			],
+			[
+				"stuedit",
+				"app/views/experimenter/studies/edit.slim"
+			],
+			[
+				"stuedi",
+				"app/views/experimenter/studies/edit.slim"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 305.0,
+	"status_bar_visible": true
+}

@@ -1,17 +1,3 @@
-//= require libraries/jquery
-//= require libraries/json2
-//= require libraries/underscore
-//= require libraries/underscore-addons
-//= require libraries/backbone
-//= require libraries/backbone-modelbinding
-//= require libraries/polymaps
-//= require libraries/xdate
-
-// http://stackoverflow.com/questions/646628/javascript-startswith
-String.prototype.startsWith = function (str){
-    return this.indexOf(str) == 0;
-};
-
 // http://stackoverflow.com/a/4198132/40956
 function getHashParams() {
 

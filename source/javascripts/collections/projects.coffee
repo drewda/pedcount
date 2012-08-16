@@ -3,7 +3,7 @@ class Smartphone.Collections.Projects extends Backbone.Collection
     @currentProjectId = 0
   model: Smartphone.Models.Project
   url: ->
-    Smartphone.Api.construct_url("projects")
+    Smartphone.Api.construct_url("projects.json")
   setCurrentProjectId: (projectId) ->
     @currentProjectId = projectId
   getCurrentProjectId: ->

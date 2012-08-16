@@ -24,3 +24,4 @@ project-android/bin/
 project-android/gen/
 
 .DS_Store
+*.log

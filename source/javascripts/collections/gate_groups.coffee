@@ -3,12 +3,12 @@ class Smartphone.Collections.GateGroups extends Backbone.Collection
   initialize: ->
     # when CountPlan's are updated, see if there is a current plan
     # and if so, fetch the appropriate GateGroup's
-    masterRouter.count_plans.bind "reset", @fetchIfCurrentCountPlan, this
+    masterRouter.count_plans.on "reset", @fetchIfCurrentCountPlan, this
 
   # URL depends on there being a current CountPlan, 
   # so we wait until we know we have one
   url: ->
-    Smartphone.Api.construct_url("projects/#{masterRouter.projects.getCurrentProjectId()}/count_plans/#{masterRouter.count_plans.getCurrentCountPlan().id}/gate_groups")
+    Smartphone.Api.construct_url("projects/#{masterRouter.projects.getCurrentProjectId()}/count_plans/#{masterRouter.count_plans.getCurrentCountPlanId()}/gate_groups.json")
   
   fetchIfCurrentCountPlan: ->
     @fetch() if masterRouter.count_plans.getCurrentCountPlan()

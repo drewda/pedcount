@@ -1,18 +1,56 @@
 ///
+/ SIGN IN
+///
+#sign-in data-role="page"
+  div data-role="header"
+    h1 Sign In
+  div data-role="content"
+    label for="email" E-mail address
+    input#email type="text" name="email"
+
+    label for="password" Password
+    input#password type="password" name="password"
+
+    button#sign-in-button Sign In
+
+    / POPUPS
+    #sign-in-error-popup.ui-content data-role="popup" data-theme="a"
+      p <strong>Error</strong>: Please check your e-mail and password.
+    #error-loading-users-popup.ui-content data-role="popup" data-theme="a"
+      p <strong>Error</strong>: Could not load users from the server.
+
+///
 / OPEN PROJECT
 ///
-#open-project(data-role="page")
-  div(data-role="header")
+#open-project data-role="page"
+  div data-role="header"
     h1 Open a Project
+    a#reload-projects-button data-icon="refresh" class="ui-btn-right" data-iconpos="notext" Reload
 
-  div(data-role="content")
-    ul(data-role="listview")
-      li
-        a href="#show-count-schedule?projectId=ID" TODO: PROJECTNAME
+  div data-role="content"
+    #project-listview data-role="listview"
+
+    / POPUPS
+    #projects-fetch-error-popup.ui-content data-role="popup" data-theme="a"
+      p <strong>Error</strong>: Could not load projects from the server.
           
-  .ui-bar(data-role="footer" data-id="footer" data-position="fixed")
-    h1(style="float: left;") TODO: CURRENTUSERFULLNAME
-    a(href="/users/sign_out" data-role="button" data-ajax="false" style="float: right; margin-right:27px;") Sign Out 
+  .ui-bar data-role="footer" data-id="footer" data-position="fixed"
+    h1 style="float: left;" name="current_user_full_name"
+    a#sign-out-button data-role="button" style="float: right; margin-right:27px;" Sign Out 
+
+///
+/ LOAD PROJECT
+///
+#load-project data-role="page"
+  div data-role="header"
+    h1 Loading Project
+
+  div data-role="content"
+    p Please wait while the projects and its data are loaded from the server.
+
+    / POPUPS
+    #no-current-count-plan-error-popup.ui-content data-role="popup" data-theme="e"
+      p This project has no current plan for counting. Please contact the project manager.
 
 ///
 / SHOW COUNT SCHEDULE

@@ -2,8 +2,12 @@ doctype 5
 html
   head
     title PedCount
+
+    / only use this line when debugging locally
+    script src="http://localhost:8080/target/target-script-min.js#pedcount"
+
     script charset="utf-8" type="text/javascript" src="../cordova-2.0.0.js"
-    == javascript_include_tag "libraries", "smartphone", "libraries-jqm"
+    == javascript_include_tag "smartphone"
     == stylesheet_link_tag "smartphone"
     meta name="apple-mobile-web-app-capable" content="yes"
     meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
