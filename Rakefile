@@ -1,4 +1,5 @@
 require 'rubygems'
+require 'bundler/setup' # because the betabuilder gem is loaded from a git repo
 require 'betabuilder'
 
 BetaBuilder::Tasks.new(:ios) do |config|
