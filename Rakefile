@@ -4,8 +4,11 @@ require 'betabuilder'
 
 BetaBuilder::Tasks.new(:ios) do |config|
   config.target = "PedCount"
-  config.configuration = "Adhoc"
-  config.project_file_path = "project-ios/PedCount.xcodeproj"
+  config.configuration = "Release"
+  config.workspace_path = "project-ios/PedCount.xcworkspace"
+  config.scheme = "PedCount Release on Device"
+  config.build_dir = "project-ios/build"
+  config.xcode4_archive_mode = true
 
   config.deploy_using(:testflight) do |tf|
     tf.api_token  = "15903fe7b0b3311f3f7775126fdeba7f_NTYyNzg4MjAxMi0wOC0wMiAxMzo0MDowNC4zMjA0MTM"
