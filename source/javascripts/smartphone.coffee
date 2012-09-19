@@ -13,9 +13,8 @@
 #= require_tree ./collections
 #= require_tree ./views
 #= require_tree ./routers
+#= require libraries/jquery-mobile-router
 #= require libraries/jquery-mobile
-#= require libraries/jquery-mobile-routerlite
-#= require libraries/jquery-mobile-simpledialog
 #= require libraries/jquery-mobile-helpers
 
 window.Smartphone =
@@ -40,6 +39,8 @@ window.Smartphone =
   masterStart: ->
     new Smartphone.Routers.Master
 
-$(document).bind "mobileinit", window.Smartphone.mobileinit
+$(document).off "mobileinit"
+$(document).on "mobileinit", window.Smartphone.mobileinit
 
+document.removeEventListener "deviceready", window.Smartphone.deviceready, false
 document.addEventListener "deviceready", window.Smartphone.deviceready, false

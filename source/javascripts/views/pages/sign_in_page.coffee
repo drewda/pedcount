@@ -8,6 +8,9 @@ class Smartphone.Views.SignInPage extends Backbone.View
     # bindings for the sign-in button
     $('#sign-in-button').on "click", $.proxy @signInButtonClick, this
 
+  # destroy: ->
+  #   $('#sign-in-button').off "click"
+    
   signInButtonClick: ->
     email = $('#email').val()
     password = $('#password').val()

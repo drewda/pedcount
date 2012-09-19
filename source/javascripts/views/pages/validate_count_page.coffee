@@ -17,21 +17,26 @@ class Smartphone.Views.ValidateCountPage extends Backbone.View
     $('#save-count-session-button').on "vclick", $.proxy @saveCountSessionButtonClick, this
 
   deleteCountSessionButtonClick: ->
-    $('#delete-count-session-button .ui-btn-text').text('Press Again to Delete')
-    $('#delete-count-session-button .ui-btn-text').off()
-    $('#delete-count-session-button .ui-btn-text').on "vclick", masterRouter.validateCountPage.yesDeleteCountSessionButtonClick
-  yesDeleteCountSessionButtonClick: ->
-    # reset the button text
-    $('#delete-count-session-button .ui-btn-text').text('Delete') # TODO: check this!
-    # remove the CountSession
-    masterRouter.count_sessions.remove @countSession
-    # return to ShowCountSchedule
-    $.mobile.changePage "#show-count-schedule?projectId=#{masterRouter.projects.getCurrentProjectId()}"
+    navigator.notification.confirm 'Are you sure you want to delete this count session?', 
+                                   masterRouter.validateCountPage.deleteCountSessionNotificationClick, 
+                                   'Cancel Counting', 
+                                   'Yes,No'
+  deleteCountSessionNotificationClick: (buttonIndex) ->
+    if buttonIndex == 1
+      # reset the button text
+      $('#delete-count-session-button .ui-btn-text').text('Delete') # TODO: check this!
+      # remove the CountSession
+      masterRouter.count_sessions.remove @countSession
+      # return to ShowCountSchedule
+      $.mobile.changePage "#show-count-schedule?projectId=#{masterRouter.projects.getCurrentProjectId()}"
+    else
+      return false
 
   editCountSessionButtonClick: ->
     # TODO: add an edit button and the necessary functionality
 
   saveCountSessionButtonClick: ->
+    $.mobile.showPageLoadingMsg()
     # upload the CountSession with its Count's to the server
     @countSession.save
       counts: @countSession.counts.toJSON()
@@ -43,9 +48,11 @@ class Smartphone.Views.ValidateCountPage extends Backbone.View
         masterRouter.count_sessions.reset()
         masterRouter.count_sessions.fetch
           success: ->
-            # return to ShowCountSchedule
-            $.mobile.changePage "#show-count-schedule?projectId=#{masterRouter.projects.getCurrentProjectId()}"
+            $.mobile.hidePageLoadingMsg()
+            JqmHelpers.flashPopupAndChangePage '#success-uploading-count-session-popup', 
+                                               "#show-count-schedule?projectId=#{masterRouter.projects.getCurrentProjectId()}"
+          error: ->
+            $.mobile.hidePageLoadingMsg()
       error: ->
-        # TODO: redo for jqm dialogs
-        bootbox.alert 'Error uploading count session to the server. It is now necessary to restart.', (ok) ->
-          window.location.reload()
+        $.mobile.hidePageLoadingMsg()
+        JqmHelpers.flashPopup '#error-uploading-count-session-popup'

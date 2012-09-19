@@ -44,7 +44,10 @@ class Smartphone.Views.SegmentLayer extends Backbone.View
     for f in e.features   
       c = f.element
 
-      c.setAttribute "class", "segment-line black"
+      if masterRouter.segments.getByCid(f.data.cid).get("selected")
+        c.setAttribute "class", "segment-line selected black"
+      else
+        c.setAttribute "class", "segment-line black"
 
       # c.removeAttribute "class"
   

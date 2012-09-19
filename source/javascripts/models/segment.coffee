@@ -13,3 +13,14 @@ class Smartphone.Models.Segment extends Backbone.Model
           [ Number @get 'end_longitude'
             Number @get 'end_latitude' ]
           ]
+  select: ->
+    @set
+       selected: true
+  deSelect: ->
+    # if this Segment is not already selected, then we want its 
+    # @set() command to be silent and not fire a changed event
+    alreadySelected = @get('selected')
+    @set
+      selected: false
+    , 
+      silent: !alreadySelected

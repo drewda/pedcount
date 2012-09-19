@@ -14,9 +14,9 @@
     button#sign-in-button Sign In
 
     / POPUPS
-    #sign-in-error-popup.ui-content data-role="popup" data-theme="a"
+    #sign-in-error-popup.ui-content data-role="popup" data-theme="e"
       p <strong>Error</strong>: Please check your e-mail and password.
-    #error-loading-users-popup.ui-content data-role="popup" data-theme="a"
+    #error-loading-users-popup.ui-content data-role="popup" data-theme="e"
       p <strong>Error</strong>: Could not load users from the server.
 
 ///
@@ -31,11 +31,12 @@
     #project-listview data-role="listview"
 
     / POPUPS
-    #projects-fetch-error-popup.ui-content data-role="popup" data-theme="a"
+    #projects-fetch-error-popup.ui-content data-role="popup" data-theme="e"
       p <strong>Error</strong>: Could not load projects from the server.
           
   .ui-bar data-role="footer" data-id="footer" data-position="fixed"
-    h1 style="float: left;" name="current_user_full_name"
+    h1#current_user_name style="float: left;"
+      / contents will be replaced when OpenProjectPage renders
     a#sign-out-button data-role="button" style="float: right; margin-right:27px;" Sign Out 
 
 ///
@@ -51,17 +52,18 @@
     / POPUPS
     #no-current-count-plan-error-popup.ui-content data-role="popup" data-theme="e"
       p This project has no current plan for counting. Please contact the project manager.
+    #error-loading-project-popup.ui-content data-role="popup" data-theme="e"
+      p <strong>Error</strong>: Could not load project data from the server.
 
 ///
 / SHOW COUNT SCHEDULE
 ///
 #show-count-schedule data-role="page"
   div data-role="header" data-position="fixed"
-    h1 data-bind="text name"
-     / will be filled with text by backbone-databind
-    #schedule-bar.ui-bar.ui-bar-b align="center" 
-      fieldset data-role="controlgroup" data-type="horizontal"
-        select#measure-count-day-select
+    h1#current_project_name
+     / contents will be replaced when ShowCountSchedulePage renders
+    #schedule-bar.ui-bar.ui-bar-b
+      select#measure-count-day-select
 
   .content data-role="content"
     #counting-schedule-listview data-role="listview"
@@ -78,8 +80,9 @@
       ' Start counting at Gate 
       span.header-gate-label-span X
       |?
-  .ui-bar.ui-bar-c align="center"
+  .ui-bar.ui-bar-c
     div data-role="controlgroup" data-type="horizontal"
+      / TODO: center buttons
       a data-role="button" data-rel="back" Cancel
       a#start-count-yes-button data-theme="b" data-role="button" Yes
 
@@ -108,11 +111,12 @@
       #minutes XX minutes
       #seconds XX seconds
       #remaining remaining
+
   .ui-bar(data-role="footer" data-id="footer" data-position="fixed")
     a#cancel-counting-button data-role="button" data-icon="delete" Cancel Counting
 
 ///
-/ VERIFY COUNT
+/ VALIDATE COUNT
 ///
 #validate-count data-role="dialog"
   div data-role="header"
@@ -126,3 +130,9 @@
     / TODO: make the edit button work
     / a#edit-count-session-button data-role="button" data-theme="c" Edit
     a#save-count-session-button data-role="button" data-theme="b" data-icon="check" Save
+
+    / POPUPS
+    #error-uploading-count-session-popup.ui-content data-role="popup" data-theme="e"
+      p <strong>Error</strong>: Cannot upload count session to the server. Check your Internet connection and try again.
+    #success-uploading-count-session-popup.ui-content data-role="popup" data-theme="e"
+      p <strong>Success</strong>: The count session has been uploaded to the server.

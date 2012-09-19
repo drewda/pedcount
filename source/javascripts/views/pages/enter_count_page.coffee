@@ -51,30 +51,26 @@ class Smartphone.Views.EnterCountPage extends Backbone.View
       masterRouter.enterCountPage.timer = setTimeout masterRouter.enterCountPage.timerFunction, 1000
 
   cancelCountingButtonClick: ->
-    $(document).simpledialog2
-      mode: 'blank'
-      showModal: 'true'
-      safeNuke: true
-      blankContent : 
-        '<h3 align="center">Are you sure you want to cancel counting?</h3>' +
-        '<a class="yes-cancel-counting-button" data-role="button" data-theme="r">Yes</a>'+
-        '<a rel="close" data-role="button">No</a>'
-      callbackOpen: ->
-        $('.yes-cancel-counting-button').off()
-        $('.yes-cancel-counting-button').on "click", masterRouter.enterCountPage.yesCancelCountingButtonClick
-  yesCancelCountingButtonClick: ->
-    # cancel the timer
-    clearInterval masterRouter.enterCountPage.timer
-    # clear out the data
-    masterRouter.enterCountPage.countSessionDates = []
-    masterRouter.enterCountPage.endTime = null
-    masterRouter.enterCountPage.millisecondsRemaining = null
-    # remove the CountSession
-    masterRouter.count_sessions.remove @countSession
-    # close and destroy the dialog
-    $.mobile.sdCurrentDialog.close()
-    # return to ShowCountSchedule
-    $.mobile.changePage "#show-count-schedule?projectId=#{masterRouter.projects.getCurrentProjectId()}"
+    navigator.notification.confirm 'Are you sure you want to cancel counting?', 
+                                   masterRouter.enterCountPage.cancelCountingNotificationClick, 
+                                   'Cancel Counting', 
+                                   'Yes,No'
+  cancelCountingNotificationClick: (buttonIndex) ->
+    if buttonIndex == 1
+      # cancel the timer
+      clearInterval masterRouter.enterCountPage.timer
+      # clear out the data
+      masterRouter.enterCountPage.countSessionDates = []
+      masterRouter.enterCountPage.endTime = null
+      masterRouter.enterCountPage.millisecondsRemaining = null
+      # remove the CountSession
+      masterRouter.count_sessions.remove @countSession
+      # close the dialog
+      $('#confirm-cancel-counting-popup').popup 'close'
+      # return to ShowCountSchedule
+      $.mobile.changePage "#show-count-schedule?projectId=#{masterRouter.projects.getCurrentProjectId()}"
+    else
+      return false
 
   countPlusOneButtonClick: ->
     # add the current datetime to the list

@@ -2,11 +2,22 @@
  *= require jquery-mobile-structure
  *= require jquery-mobile-theme
  *= require jquery-mobile-red-buttons
- *= require jquery-mobile-simpledialog
  *
  *= require_self
  *= require_tree . 
 */
+
+@import "compass";
+
+#show-count-schedule {
+  /* allow for longer project names */
+  .ui-header h1 { 
+    margin: .6em 6px .8em !important;
+  }
+  #schedule-bar {
+    text-align: center;
+  }
+}
 
 #start-count {
   padding: 0;
@@ -37,6 +48,9 @@
   }
 }
 #enter-count {
+  .ui-header h1 { 
+    margin: .6em 6px .8em !important;
+  }
   .content {
     padding: 4px 0;
     margin: 0;
@@ -44,10 +58,11 @@
     .ui-btn {
       margin: 8px;
       height: 120px !important;
-      font-size: 50px;
-      -moz-border-radius: .2em;
-      -webkit-border-radius: .2em;
-      border-radius: .2em;
+      @include border-radius(0);
+      .ui-btn-inner {
+        font-size: 50px;
+        @include border-radius(0);
+      }
     }
     #counter {
       color: #555;

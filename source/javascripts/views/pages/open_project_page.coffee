@@ -16,14 +16,22 @@ class Smartphone.Views.OpenProjectPage extends Backbone.View
     masterRouter.projects.on 'remove', @renderProjectListview, this
     masterRouter.projects.on 'change', @renderProjectListview, this
 
+    masterRouter.users.on 'reset', @render, this # update user name
     @render()
 
     @renderProjectListview()
 
+  # destroy: ->
+  #   $('#sign-out-button').off "click"
+  #   $('#reload-projects-button').off "click"
+  #   masterRouter.projects.off 'reset'
+  #   masterRouter.projects.off 'add'
+  #   masterRouter.projects.off 'remove'
+  #   masterRouter.projects.off 'change'
 
   render: ->
     if masterRouter.users.getCurrentUser()
-      $('[named=current_user_full_name]').text masterRouter.users.getCurrentUser().full_name()
+      $('#current_user_name').text masterRouter.users.getCurrentUser().full_name()
 
   renderProjectListview: ->
     @projectListview = new Smartphone.Views.ProjectListview
@@ -39,4 +47,4 @@ class Smartphone.Views.OpenProjectPage extends Backbone.View
         $.mobile.hidePageLoadingMsg()
       error: ->
         $.mobile.hidePageLoadingMsg()
-        $('#projects-fetch-error-popup').popup 'open'
+        JqmHelpers.flashPopup '#projects-fetch-error-popup'

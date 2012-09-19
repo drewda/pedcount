@@ -10,11 +10,10 @@ class Smartphone.Views.StartCountPage extends Backbone.View
 
     masterRouter.map = new Smartphone.Views.Map
 
-    geojson = []
-    geojson.push @gate.getSegment().geojson()
+    @gate.getSegment().select() #TODO: don't forget to deselect
 
     masterRouter.segment_layer = new Smartphone.Views.SegmentLayer
-      geojson: geojson
+      geojson: masterRouter.segments.geojson().features
       segmentDefaultStrokeWidth: 10
       segmentSelectedStrokeWidth: 10
 

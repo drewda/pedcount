@@ -1,14 +1,15 @@
 class Smartphone.Views.ShowCountSchedulePage extends Backbone.View
-  el: '#show-count-schedule'
   initialize: ->
-    console.log '1'
-    @modelBinder = new Backbone.ModelBinder()
+    $('#current_project_name').text masterRouter.projects.getCurrentProject().get('name')
+
     # TODO: finish
-    console.log '2'
+    console.log 'a'
     @date = @options.date
+    console.log 'b'
     @userId = masterRouter.users.getCurrentUser().id
+    console.log 'c'
     @countPlan = masterRouter.count_plans.getCurrentCountPlan()
-    console.log '3'
+
     if not @date
       # otherwise select the start or the end of the CountPlan's date range
       today = new XDate()
@@ -21,12 +22,13 @@ class Smartphone.Views.ShowCountSchedulePage extends Backbone.View
       else
         @date = endDate.toString("yyyy-MM-dd")
       projectId = masterRouter.projects.getCurrentProjectId()
+      console.log 'changing the date'
       $.mobile.changePage "#show-count-schedule?projectId=#{projectId}&date=#{@date}"
-    console.log '4'
+
     @countingScheduleListView = new Smartphone.Views.CountingScheduleListview
       date: @date
       userId: @userId
-    console.log '5'
+
     # disable the drop-down select bindings that have been turned on
     # when visiting this page previously
     $('#measure-count-day-select').off "change"
@@ -43,6 +45,9 @@ class Smartphone.Views.ShowCountSchedulePage extends Backbone.View
 
     # bindings for the drop-down select
     $('#measure-count-day-select').on "change", $.proxy @measureCountDaySelectChange, this
+
+  destroy: ->
+    $('#measure-count-day-select').off "change"
 
   measureCountDaySelectChange: ->
     date = $('#measure-count-day-select').val()

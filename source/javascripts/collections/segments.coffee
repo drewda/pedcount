@@ -6,3 +6,7 @@ class Smartphone.Collections.Segments extends Backbone.Collection
     geojson =
       type: 'FeatureCollection'
       features: _.compact @map (s) -> s.geojson()
+  selected: ->
+    @filter (s) -> s.get 'selected'
+  selectNone: ->
+    _.each @selected(), (s) -> s.doDeselect()
