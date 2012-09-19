@@ -3,7 +3,6 @@
 #= require libraries/underscore
 #= require libraries/underscore-addons
 #= require libraries/backbone
-#= require libraries/backbone-modelbinder
 #= require libraries/polymaps
 #= require libraries/xdate
 #= require libraries/starts-with
