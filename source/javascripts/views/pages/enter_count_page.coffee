@@ -13,6 +13,8 @@ class Smartphone.Views.EnterCountPage extends Backbone.View
     # over from a previous CountSession
     @redrawCounter()
 
+    masterRouter.powerManagement 'dim'
+
     # set the start time to now
     start = new XDate
     @countSession.set
@@ -59,6 +61,8 @@ class Smartphone.Views.EnterCountPage extends Backbone.View
     if buttonIndex == 1
       # cancel the timer
       clearInterval masterRouter.enterCountPage.timer
+      # release the power management control
+      masterRouter.powerManagement 'release'
       # clear out the data
       masterRouter.enterCountPage.countSessionDates = []
       masterRouter.enterCountPage.endTime = null

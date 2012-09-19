@@ -176,3 +176,19 @@ class Smartphone.Routers.Master extends Backbone.Router
           projectId = hashParams.projectId
           masterRouter.projects.setCurrentProjectId projectId
         return true
+
+    masterRouter.powerManagement = (newStatus) ->
+      if newStatus == 'release'
+        # no longer keep device from going to sleep
+        cordova.require('cordova/plugin/powermanagement').release(
+          -> console.log 'PowerManagement release: success'
+          -> console.log 'PowerManagement release: error'
+        )
+      else if newStatus == 'dim'
+        # keep device from going to sleep
+        # iOS: set idleTimerDisabled
+        # Android: set SCREEN_DIM_WAKE_LOCK
+        cordova.require('cordova/plugin/powermanagement').dim(
+          -> console.log 'PowerManagement dim: success'
+          -> console.log 'PowerManagement dim: error'
+        )

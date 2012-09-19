@@ -16,6 +16,7 @@
 #= require libraries/jquery-mobile-router
 #= require libraries/jquery-mobile
 #= require libraries/jquery-mobile-helpers
+#= require libraries/cordova-powermanagement
 
 window.Smartphone =
   Models: {}

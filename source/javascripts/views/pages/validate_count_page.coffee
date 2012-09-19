@@ -29,6 +29,8 @@ class Smartphone.Views.ValidateCountPage extends Backbone.View
       masterRouter.count_sessions.remove @countSession
       # return to ShowCountSchedule
       $.mobile.changePage "#show-count-schedule?projectId=#{masterRouter.projects.getCurrentProjectId()}"
+      # release the power management control
+      masterRouter.powerManagement 'release'
     else
       return false
 
@@ -51,6 +53,8 @@ class Smartphone.Views.ValidateCountPage extends Backbone.View
             $.mobile.hidePageLoadingMsg()
             JqmHelpers.flashPopupAndChangePage '#success-uploading-count-session-popup', 
                                                "#show-count-schedule?projectId=#{masterRouter.projects.getCurrentProjectId()}"
+           # release the power management control
+           masterRouter.powerManagement 'release'
           error: ->
             $.mobile.hidePageLoadingMsg()
       error: ->

@@ -47,6 +47,7 @@
     <plugin name="Capture" value="org.apache.cordova.Capture"/>
     <plugin name="Battery" value="org.apache.cordova.BatteryListener"/>
     <plugin name="SplashScreen" value="org.apache.cordova.SplashScreen"/>
+    <plugin name="PowerManagement" value="org.apache.cordova.plugin.PowerManagement"/>
 </plugins>
 </cordova>
 
