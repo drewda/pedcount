@@ -16,7 +16,7 @@ class Smartphone.Models.Segment extends Backbone.Model
   select: ->
     @set
        selected: true
-  deSelect: ->
+  doDeselect: ->
     # if this Segment is not already selected, then we want its 
     # @set() command to be silent and not fire a changed event
     alreadySelected = @get('selected')

@@ -3,11 +3,12 @@
 #= require libraries/underscore
 #= require libraries/underscore-addons
 #= require libraries/backbone
-#= require libraries/polymaps
 #= require libraries/xdate
 #= require libraries/starts-with
 #= require libraries/get-hash-params
 #= require_self
+#= require libraries/leaflet-prefer-canvas
+#= require libraries/leaflet
 #= require_tree ./models
 #= require_tree ./collections
 #= require_tree ./views

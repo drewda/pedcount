@@ -2,6 +2,7 @@
  *= require jquery-mobile-structure
  *= require jquery-mobile-theme
  *= require jquery-mobile-red-buttons
+ *= require leaflet
  *
  *= require_self
  *= require_tree . 
@@ -30,21 +31,6 @@
   .content {
     padding: 0;
     overflow-y: hidden;
-    #map-area {
-      padding: 0;
-      #segment-layer {
-        path {
-          opacity: .8;
-          stroke-linecap: round;
-        }
-        path.black {
-          stroke: #000000;
-        }
-        path.selected {
-          stroke: #55ee33;
-        }
-      }
-    }
   }
 }
 #enter-count {

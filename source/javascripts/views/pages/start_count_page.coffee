@@ -10,19 +10,20 @@ class Smartphone.Views.StartCountPage extends Backbone.View
 
     masterRouter.map = new Smartphone.Views.Map
 
-    @gate.getSegment().select() #TODO: don't forget to deselect
+    # deselect any previous segments and now select the new one
+    masterRouter.segments.selectNone()
+
+    @gate.getSegment().select()
 
     masterRouter.segment_layer = new Smartphone.Views.SegmentLayer
       geojson: masterRouter.segments.geojson().features
-      segmentDefaultStrokeWidth: 10
-      segmentSelectedStrokeWidth: 10
-
     masterRouter.segment_layer.render()
-    # TODO: zoom to the segment extent
-    masterRouter.map.map.center
-      lat: @gate.getSegment().get('start_latitude')
-      lon: @gate.getSegment().get('start_longitude')
-    masterRouter.map.map.zoom 16
+    # TODO: figure out which order to enter the pairs in SW, NE
+    # masterRouter.map.map.fitBounds [
+    #   [@gate.getSegment().get('start_latitude'), @gate.getSegment().get('start_longitude')]
+    #   [@gate.getSegment().get('end_latitude'), @gate.getSegment().get('end_longitude')]
+    # ]
+    masterRouter.map.map.setView [Number(@gate.getSegment().get('start_latitude')), Number(@gate.getSegment().get('start_longitude'))], 16
 
   startCountYesButtonClick: ->
     projectId = masterRouter.projects.getCurrentProjectId()

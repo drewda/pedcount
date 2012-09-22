@@ -1,8 +1,5 @@
 class Smartphone.Views.SegmentLayer extends Backbone.View
   initialize: ->
-    @segmentDefaultStrokeWidth = @options.segmentDefaultStrokeWidth
-    @segmentSelectedStrokeWidth = @options.segmentSelectedStrokeWidth
-   
     @geojson = @options.geojson
     
     @layer = null
@@ -12,48 +9,13 @@ class Smartphone.Views.SegmentLayer extends Backbone.View
   disable: ->
     @remove()
   remove: ->
-    if @layer
-      masterRouter.map.map.remove(@layer)
-    if $('#segment-layer').length > 0
-      $('#segment-layer').remove()
+    masterRouter.map.map.removeLayer(@layer) if @layer
   render: ->
     @remove()
-    @layer = po.geoJson()
-              .features(@geojson)
-              .id("segment-layer")
-              .tile(false)
-              .scale("fixed")
-              .on("load", @loadFeatures)
-              .on("show", @showFeatures)
-
-                                 
-    masterRouter.map.map.add(@layer)
-    # reorder the layers: we want SegmentLayer to be under GeoPointLayer
-    #                     and we want both to be under the zoom buttons
-    $('#osm-color-layer').after($('#segment-layer'))
-
-  loadFeatures: (e) ->
-    for f in e.features   
-      c = f.element
-
-      c.setAttribute "id", "segment-line-#{f.data.cid}"
-      c.setAttribute "stroke-width", masterRouter.segment_layer.segmentDefaultStrokeWidth
-
-  showFeatures: (e) ->
-
-    for f in e.features   
-      c = f.element
-
-      if masterRouter.segments.getByCid(f.data.cid).get("selected")
-        c.setAttribute "class", "segment-line selected black"
-      else
-        c.setAttribute "class", "segment-line black"
-
-      # c.removeAttribute "class"
-  
-  setSegmentDefaultStrokeWidth: (segmentDefaultStrokeWidth) ->
-    @segmentDefaultStrokeWidth = segmentDefaultStrokeWidth
-    @render()
-  setSegmentSelectedStrokeWidth: (segmentSelectedStrokeWidth) ->
-    @segmentSelectedStrokeWidth = segmentSelectedStrokeWidth
-    @render()
+    @layer = L.geoJson @geojson,
+      style: (feature) ->
+        if masterRouter.segments.getByCid(feature.cid).get("selected")
+          return { color: '#55ee33', weight: 10, opacity: .8 }
+        else
+          return { color: '#000000', weight: 10, opacity: .8 }
+    @layer.addTo(masterRouter.map.map)
