@@ -32,8 +32,6 @@ class Smartphone.Routers.Master extends Backbone.Router
               masterRouter.projects.currentProjectId = 0
 
               masterRouter.openProjectPage = new Smartphone.Views.OpenProjectPage
-              # if masterRouter.projects.length == 0
-              #   masterRouter.openProjectPage.reloadProjectsButtonClick()
           # else if eventType == 'pagehide'
           #   masterRouter.openProjectPage.destroy()
 
@@ -69,6 +67,7 @@ class Smartphone.Routers.Master extends Backbone.Router
                         $.mobile.hidePageLoadingMsg()
                         JqmHelpers.flashPopupAndChangePage '#no-current-count-plan-error-popup', "#open-project"
                     error: -> masterRouter.errorLoadingProjectPopup()
+                error: -> masterRouter.errorLoadingProjectPopup()
         
         showCountSchedule: (eventType, matchObj, ui, page, evt) =>
           console.log "#{window.location.hash} -- #{eventType}"
@@ -159,8 +158,8 @@ class Smartphone.Routers.Master extends Backbone.Router
             return true
           error: ->
             $.mobile.hidePageLoadingMsg()
-            $.mobile.changePage '#open-project' # TODO: fix this loop!!!
-            $('#projects-fetch-error-popup').popup 'open'
+            $.mobile.changePage '#sign-in'
+            JqmHelpers.flashPopup '#error-communicating-with-server-popup'
             return false
       else
         # we can now set the current project ID
