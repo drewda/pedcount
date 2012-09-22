@@ -46,37 +46,29 @@ class Smartphone.Routers.Master extends Backbone.Router
               masterRouter.segments.fetch
                 success: ->
                   masterRouter.count_plans.fetch
-                  hashParams = getHashParams()
-                  if masterRouter.reset(hashParams, ['projectId'])
-                    $.mobile.showPageLoadingMsg()
-                    masterRouter.segments.fetch
-                      success: ->
-                        masterRouter.count_plans.fetch
+                    success: ->
+                      if masterRouter.count_plans.getCurrentCountPlan()
+                        # we need to fetch GateGroup's because that's needed for CountPlan.getAllUserIds()
+                        # maybe in the future this is a method to move to the server-side
+                        masterRouter.gate_groups.fetch
                           success: ->
-                            if masterRouter.count_plans.getCurrentCountPlan()
-                              # we need to fetch GateGroup's because that's needed for CountPlan.getAllUserIds()
-                              # maybe in the future this is a method to move to the server-side
-                              masterRouter.gate_groups.fetch
-                                success: ->
-                                  masterRouter.count_sessions.fetch
-                                    success: ->
-                                      $.mobile.hidePageLoadingMsg()
-                                      if hashParams.date
-                                        # if a Cordova onResume is bring us back through here, it may specify a date and user id
-                                        $.mobile.changePage "#show-count-schedule?projectId=#{masterRouter.projects.getCurrentProjectId()}&date=#{hashParams.date}"
-                                      else
-                                        # the normal flow just specifies the project
-                                        $.mobile.changePage "#show-count-schedule?projectId=#{masterRouter.projects.getCurrentProjectId()}"
-                                    error: -> masterRouter.errorLoadingProjectPopup()
-                                error: -> masterRouter.errorLoadingProjectPopup()
-                            else
-                              # if there is no current count plan for this project, 
-                              # send the user back to select a different project
-                              $.mobile.hidePageLoadingMsg()
-                              JqmHelpers.flashPopupAndChangePage '#no-current-count-plan-error-popup', "#open-project"
+                            masterRouter.count_sessions.fetch
+                              success: ->
+                                $.mobile.hidePageLoadingMsg()
+                                if hashParams.date
+                                  # if a Cordova onResume is bring us back through here, it may specify a date and user id
+                                  $.mobile.changePage "#show-count-schedule?projectId=#{masterRouter.projects.getCurrentProjectId()}&date=#{hashParams.date}"
+                                else
+                                  # the normal flow just specifies the project
+                                  $.mobile.changePage "#show-count-schedule?projectId=#{masterRouter.projects.getCurrentProjectId()}"
+                              error: -> masterRouter.errorLoadingProjectPopup()
                           error: -> masterRouter.errorLoadingProjectPopup()
-                      error: -> masterRouter.errorLoadingProjectPopup()
-                error: -> masterRouter.errorLoadingProjectPopup()
+                      else
+                        # if there is no current count plan for this project, 
+                        # send the user back to select a different project
+                        $.mobile.hidePageLoadingMsg()
+                        JqmHelpers.flashPopupAndChangePage '#no-current-count-plan-error-popup', "#open-project"
+                    error: -> masterRouter.errorLoadingProjectPopup()
         
         showCountSchedule: (eventType, matchObj, ui, page, evt) =>
           console.log "#{window.location.hash} -- #{eventType}"

@@ -26,6 +26,7 @@ window.Smartphone =
   Api:
     protocol: 'http'
     host: 'localhost:3000'
+    # host: 'pedcount.s3sol.com'
     version: 'api'
     construct_url: (url) ->
       url = '/' + url if url[0] != '/'

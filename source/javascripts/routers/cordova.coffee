@@ -22,7 +22,7 @@ class Smartphone.Routers.Cordova extends Backbone.Router
     window.localStorage.setItem Smartphone.LocalStorageKeys.previous_hash, currentHash
 
     # save extra details depending upon the currentHash
-    if currentHash.startsWith '#enter-count'
+    # if currentHash.startsWith '#enter-count'
       # TODO
 
   onCordovaResume: ->

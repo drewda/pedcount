@@ -56,6 +56,7 @@ class Smartphone.Views.ValidateCountPage extends Backbone.View
            # release the power management control
            masterRouter.powerManagement 'release'
           error: ->
+            # TODO: add another error popup
             $.mobile.hidePageLoadingMsg()
       error: ->
         $.mobile.hidePageLoadingMsg()
