@@ -1,5 +1,5 @@
 /*
-* jQuery Mobile Framework Git Build: SHA1: f47fa3a8d13429fbb7500f22103856cd546b5724 <> Date: Fri Sep 14 18:08:17 2012 -0400
+* jQuery Mobile Framework Git Build: SHA1: ce06297f5caebeafa243e0a72efc422700292cca <> Date: Fri Sep 21 09:37:21 2012 -0700
 * http://jquerymobile.com
 *
 * Copyright 2012 jQuery Foundation and other contributors
@@ -29,7 +29,7 @@
 	$.mobile = $.extend( {}, {
 
 		// Version of the jQuery Mobile Framework
-		version: "1.2.0-rc.1",
+		version: "1.2.0-rc.2",
 
 		// Namespace used framework-wide for data-attrs. Default is no namespace
 		ns: "",
@@ -6430,6 +6430,8 @@ $( document ).bind( "pagecreate create", function( e ) {
 			// NOTE Windows Phone 7 has a scroll position caching issue that
 			//      requires us to disable popup history management by default
 			//      https://github.com/jquery/jquery-mobile/issues/4784
+			//
+			// NOTE this option is modified in _create!
 			history: !$.mobile.browser.ie
 		},
 
@@ -6521,6 +6523,11 @@ $( document ).bind( "pagecreate create", function( e ) {
 				thisPage = this.element.closest( ".ui-page" ),
 				myId = this.element.attr( "id" ),
 				self = this;
+
+			// We need to adjust the history option to be false if there's no AJAX nav.
+			// We can't do it in the option declarations because those are run before
+			// it is determined whether there shall be AJAX nav.
+			this.options.history = this.options.history && $.mobile.ajaxEnabled && $.mobile.hashListeningEnabled;
 
 			if ( thisPage.length === 0 ) {
 				thisPage = $( "body" );
@@ -6711,7 +6718,7 @@ $( document ).bind( "pagecreate create", function( e ) {
 			];
 
 			$.mobile.widget.prototype._setOption.apply( this, arguments );
-			if ( exclusions.indexOf( key ) === -1 ) {
+			if ( $.inArray( key, exclusions ) === -1 ) {
 				// Record the option change in the options and in the DOM data-* attributes
 				this.element.attr( "data-" + ( $.mobile.ns || "" ) + ( key.replace( /([A-Z])/, "-$1" ).toLowerCase() ), value );
 			}
@@ -6941,7 +6948,7 @@ $( document ).bind( "pagecreate create", function( e ) {
 				/* TODO:
 				The native browser on Android 4.0.X ("Ice Cream Sandwich") suffers from an issue where the popup overlay appears to be z-indexed
 				above the popup itself when certain other styles exist on the same page -- namely, any element set to `position: fixed` and certain
-				types of input. These issues are reminiscent of previously uncovered bugs in older versions of Android’s native browser:
+				types of input. These issues are reminiscent of previously uncovered bugs in older versions of Android's native browser:
 				https://github.com/scottjehl/Device-Bugs/issues/3
 
 				This fix closes the following bugs ( I use "closes" with reluctance, and stress that this issue should be revisited as soon as possible ):
@@ -7057,7 +7064,7 @@ $( document ).bind( "pagecreate create", function( e ) {
 		// TODO no clear deliniation of what should be here and
 		// what should be in _open. Seems to be "visual" vs "history" for now
 		open: function( options ) {
-			var self = this, opts = this.options, url, hashkey, activePage;
+			var self = this, opts = this.options, url, hashkey, activePage, currentIsDialog, hasHash, urlHistory;
 
 			// make sure open is idempotent
 			if( $.mobile.popup.active ) {
@@ -7069,7 +7076,7 @@ $( document ).bind( "pagecreate create", function( e ) {
 
 			// if history alteration is disabled close on navigate events
 			// and leave the url as is
-			if( !opts.history ) {
+			if( !( opts.history ) ) {
 				self._open( options );
 				self._bindContainerClose();
 
@@ -7092,29 +7099,41 @@ $( document ).bind( "pagecreate create", function( e ) {
 			// cache some values for min/readability
 			hashkey = $.mobile.dialogHashKey;
 			activePage = $.mobile.activePage;
+			currentIsDialog = activePage.is( ".ui-dialog" );
+			url = $.mobile.urlHistory.getActive().url;
+			hasHash = ( url.indexOf( hashkey ) > -1 ) && !currentIsDialog;
+			urlHistory = $.mobile.urlHistory;
 
-			// NOTE I'm not 100% that this is the right place to get the default url
-			url = activePage.jqmData( "url" );
+			if ( hasHash ) {
+				self._open( options );
+				self._bindContainerClose();
+				return;
+			}
 
 			// if the current url has no dialog hash key proceed as normal
 			// otherwise, if the page is a dialog simply tack on the hash key
-			if ( url.indexOf( hashkey ) === -1 && !activePage.is( ".ui-dialog" ) ){
+			if ( url.indexOf( hashkey ) === -1 && !currentIsDialog ){
 				url = url + hashkey;
 			} else {
 				url = $.mobile.path.parseLocation().hash + hashkey;
 			}
 
+			// Tack on an extra hashkey if this is the first page and we've just reconstructed the initial hash
+			if ( urlHistory.activeIndex === 0 && url === urlHistory.initialDst ) {
+				url += hashkey;
+			}
+
 			// swallow the the initial navigation event, and bind for the next
 			opts.container.one( opts.navigateEvents, function( e ) {
 				e.preventDefault();
-				self._bindContainerClose();
-
-				// forward the options on to the visual open
 				self._open( options );
+				self._bindContainerClose();
 			});
 
+			urlHistory.ignoreNextHashChange = currentIsDialog;
+
 			// Gotta love methods with 1mm args :(
-			$.mobile.urlHistory.addNew( url, undefined, undefined, undefined, "dialog" );
+			urlHistory.addNew( url, undefined, undefined, undefined, "dialog" );
 
 			// set the new url with (or without) the new dialog hash key
 			$.mobile.path.set( url );
@@ -8106,7 +8125,9 @@ $.widget( "mobile.selectmenu", $.mobile.widget, {
 			}
 		}).bind( "mouseup", function() {
 			if ( self.options.preventFocusZoom ) {
-				$.mobile.zoom.enable( true );
+				setTimeout(function() {
+					$.mobile.zoom.enable( true );
+				}, 0);
 			}
 		});
 	},
@@ -8694,7 +8715,7 @@ $( document ).bind( "pagecreate create", function( e ) {
 			transition: "slide", //can be none, fade, slide (slide maps to slideup or slidedown)
 			fullscreen: false,
 			tapToggle: true,
-			tapToggleBlacklist: "a, button, input, select, textarea, .ui-header-fixed, .ui-footer-fixed",
+			tapToggleBlacklist: "a, button, input, select, textarea, .ui-header-fixed, .ui-footer-fixed, .ui-popup",
 			hideDuringFocus: "input, textarea, select",
 			updatePagePadding: true,
 			trackPersistentToolbars: true,
@@ -9066,7 +9087,8 @@ $( document ).bind( "pagecreate create", function( e ) {
 			if ( ! ( $.mobile.hashListeningEnabled &&
 				$.mobile.path.isHashValid( location.hash ) &&
 				( $( hashPage ).is( ':jqmData(role="page")' ) ||
-					$.mobile.path.isPath( hash ) ) ) ) {
+					$.mobile.path.isPath( hash ) ||
+					hash === $.mobile.dialogHashKey ) ) ) {
 
 				// Store the initial destination
 				if ( $.mobile.path.isHashValid( location.hash ) ) {
