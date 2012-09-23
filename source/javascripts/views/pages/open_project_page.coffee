@@ -41,10 +41,10 @@ class Smartphone.Views.OpenProjectPage extends Backbone.View
     $.mobile.changePage "#sign-in"
 
   reloadProjectsButtonClick: ->
-    $.mobile.showPageLoadingMsg()
+    $.mobile.loading 'show'
     masterRouter.projects.fetch
       success: ->
-        $.mobile.hidePageLoadingMsg()
+        $.mobile.loading 'hide'
       error: ->
-        $.mobile.hidePageLoadingMsg()
+        $.mobile.loading 'hide'
         JqmHelpers.flashPopup '#projects-fetch-error-popup'

@@ -6,7 +6,7 @@ window.JqmHelpers =
     setTimeout ->
       $(objectId).popup 'close'
     , milliseconds
-   flashPopupAndChangePage: (objectId, newPageHash, milliseconds = 1500) ->
+  flashPopupAndChangePage: (objectId, newPageHash, milliseconds = 1500) ->
     # Note that both the objectId and the newPageHash should include the leading hash.
     # For example: objectId = "#the-alert-popup" and newPageHash = "#open-project"
     $(objectId).popup 'open'
@@ -14,3 +14,8 @@ window.JqmHelpers =
       $(objectId).popup 'close'
       $.mobile.changePage newPageHash
     , milliseconds
+  changePageAndFlashPopup: (objectId, newPageHash, milliseconds = 1500) ->
+    # Note that both the objectId and the newPageHash should include the leading hash.
+    # For example: objectId = "#the-alert-popup" and newPageHash = "#open-project"
+    $.mobile.changePage newPageHash
+    JqmHelpers.flashPopup objectId, milliseconds

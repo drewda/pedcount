@@ -18,7 +18,7 @@ class Smartphone.Views.SignInPage extends Backbone.View
     if email == "" or password == ""
       @signInError()
     else
-      $.mobile.showPageLoadingMsg()
+      $.mobile.loading 'show'
       $.ajax 
         type: 'post'
         # contentType: 'application/json; charset=utf-8'
@@ -39,15 +39,15 @@ class Smartphone.Views.SignInPage extends Backbone.View
           "auth_token": data.token
       masterRouter.users.fetch
         success: -> 
-          $.mobile.hidePageLoadingMsg()
+          $.mobile.loading 'hide'
           $.mobile.changePage "#open-project"
         error: ->
-          $.mobile.hidePageLoadingMsg()
+          $.mobile.loading 'hide'
           JqmHelpers.flashPopup '#error-loading-users-popup'
     else
       @signInError()
 
   signInError: ->
-    $.mobile.hidePageLoadingMsg()
+    $.mobile.loading 'hide'
     console.log 'sign in error'
     JqmHelpers.flashPopup '#sign-in-error-popup'

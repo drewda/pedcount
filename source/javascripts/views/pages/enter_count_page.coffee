@@ -72,7 +72,9 @@ class Smartphone.Views.EnterCountPage extends Backbone.View
       # close the dialog
       $('#confirm-cancel-counting-popup').popup 'close'
       # return to ShowCountSchedule
-      $.mobile.changePage "#show-count-schedule?projectId=#{masterRouter.projects.getCurrentProjectId()}"
+      # ight not tbe necessary to reload the entire project, but for
+      # now we'll use this as a way to check off the completed CountSession
+      $.mobile.changePage "#load-project?projectId=#{masterRouter.projects.getCurrentProjectId()}"
     else
       return false
 
