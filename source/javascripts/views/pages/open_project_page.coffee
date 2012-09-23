@@ -1,7 +1,6 @@
 class Smartphone.Views.OpenProjectPage extends Backbone.View
   el: '#open-project'
   initialize: ->
-    console.log 'initializing OpenProjectPage'
     # disable the click bindings that have been turned on
     # when visiting this page previously
     $('#sign-out-button').off "click"
