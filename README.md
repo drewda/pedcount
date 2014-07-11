@@ -1,7 +1,7 @@
 PedCount
 ========
 
-Smartphone app for counting pedestrians, which connects to an instance of [the hosted Web application PedCount/PedPlus](https://github.com/s3sol/pedplus). Built using [PhoneGap](http://www.phonegap.com) (also known as Apache Cordova), which generates native apps for iPhone and Android.
+Smartphone app for counting pedestrians, which connects to an instance of [the hosted Web application PedPlus](https://github.com/drewda/pedplus). Built using [PhoneGap](http://www.phonegap.com) (also known as Apache Cordova), which generates native apps for iPhone and Android.
 
 This repo includes three different pieces:
 
